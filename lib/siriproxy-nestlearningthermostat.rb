@@ -32,7 +32,7 @@ class SiriProxy::Plugin::NestLearningThermostat < SiriProxy::Plugin
     listen_for(/nest.*([0-9]{2})/i) { |temp| set_thermostat(temp) }
     
     def login_to_nest
-        loginRequest = HTTParty.post('https://home.nest.com/user/login',:body => { :username => self.nest_email, :password => self.nest_password }, :headers => { 'User-Agent' => 'Nest/1.1.0.10 CFNetwork/548.0.4' })
+        loginRequest = HTTParty.post('https://home.trial.nest.com/user/login',:body => { :username => self.nest_email, :password => self.nest_password }, :headers => { 'User-Agent' => 'Nest/1.1.0.10 CFNetwork/548.0.4' })
                 
         authResult = JSON.parse(loginRequest.body) rescue nil
         if authResult
