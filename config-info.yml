@@ -5,6 +5,6 @@
 ##########################
     
     - name: 'NestLearningThermostat'
-      git: 'git://github.com/chilitechno/SiriProxy-NestLearningThermostat.git'
+      git: 'git://github.com/salomon66/NestBetaTrial.git'
       email: '<your_nest_account_email>'
       password: '<your_nest_account_password>'
